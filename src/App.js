@@ -9,9 +9,9 @@ import './App.css'
  */
 export const App = (props) => {
 
-  const [dogUrl, setDogUrl] = useState("");
+  const [dogUrl, setDogUrl] = useState("https://images.dog.ceo/breeds/sheepdog-english/n02105641_3499.jpg");
   const onButtonClick =()=>{
-    setDogUrl("https://images.dog.ceo/breeds/sheepdog-english/n02105641_3499.jpg");
+    setDogUrl("https://images.dog.ceo/breeds/terrier-westhighland/n02098286_577.jpg");
   }
 
 
