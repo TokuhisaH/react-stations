@@ -9,6 +9,10 @@ import './App.css'
  */
 export const App = () => {
   return (
-    <header>Hello アプリ</header>
+    <React.Fragment>  
+      <header>Hello アプリ</header>
+      <h2>犬の画像を表示するためのアプリです</h2>
+      <img src="https://images.dog.ceo/breeds/sheepdog-english/n02105641_3499.jpg"></img>
+    </React.Fragment>
   )
 }
