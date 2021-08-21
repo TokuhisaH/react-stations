@@ -9,16 +9,13 @@ import './App.css'
  */
 export const App = (props) => {
 
-  const [response, setResponse] = useState("");
   const [dogUrl, setDogUrl] = useState("");
-  useEffect(() => {
-    fetch("https://dog.ceo/api/breeds/image/random")
-    .then(res => res.json())
-    .then(data => setResponse(data.message))
-  },[dogUrl]);
+  useEffect(() => {});
 
   const onButtonclick = () =>{
-    setDogUrl(response)
+    fetch("https://dog.ceo/api/breeds/image/random")
+    .then(res => res.json())
+    .then(data => setDogUrl(data.message))
   }
 
 
