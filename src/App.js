@@ -10,15 +10,12 @@ import './App.css'
 export const App = (props) => {
 
   const [dogUrl, setDogUrl] = useState("");
-  useEffect(() => {});
 
   const onButtonclick = () =>{
     fetch("https://dog.ceo/api/breeds/image/random")
     .then(res => res.json())
     .then(data => setDogUrl(data.message))
   }
-
-
     return (
       <React.Fragment>  
         <header>Hello アプリ</header>
