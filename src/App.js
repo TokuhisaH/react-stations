@@ -1,6 +1,6 @@
 // DO NOT DELETE
 
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import './App.css'
 
 /**
@@ -9,20 +9,27 @@ import './App.css'
  */
 export const App = (props) => {
 
-  const [dogUrl, setDogUrl] = useState("https://images.dog.ceo/breeds/sheepdog-english/n02105641_3499.jpg");
-  const onButtonClick =()=>{
-    setDogUrl("https://images.dog.ceo/breeds/terrier-westhighland/n02098286_577.jpg");
+  const [response, setResponse] = useState("");
+  const [dogUrl, setDogUrl] = useState("");
+  useEffect(() => {
+    fetch("https://dog.ceo/api/breeds/image/random")
+    .then(res => res.json())
+    .then(data => setResponse(data.message))
+  },[dogUrl]);
+
+  const onButtonclick = () =>{
+    setDogUrl(response)
   }
 
 
-  return (
-    <React.Fragment>  
-      <header>Hello アプリ</header>
-      <h2>犬の画像を表示するためのアプリです</h2>
-      <button onClick={onButtonClick}>
-      on click
-      </button>
-      <img src={dogUrl}></img>
-    </React.Fragment>
-  )
+    return (
+      <React.Fragment>  
+        <header>Hello アプリ</header>
+        <h2>犬の画像を表示するためのアプリです</h2>
+        <button onClick={onButtonclick}>
+        on click
+        </button>
+        <img src={dogUrl}></img>
+      </React.Fragment>
+    )
 }
