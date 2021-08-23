@@ -9,7 +9,7 @@ import './App.css'
  */
 export const App = (props) => {
 
-  const [dogUrl, setDogUrl] = useState("");
+  const [dogUrl, setDogUrl] = useState("https://images.dog.ceo/breeds/spaniel-brittany/n02101388_6057.jpg");
 
   const onButtonclick = () =>{
     fetch("https://dog.ceo/api/breeds/image/random")
@@ -17,13 +17,15 @@ export const App = (props) => {
     .then(data => setDogUrl(data.message))
   }
     return (
-      <React.Fragment>  
-        <header>Hello アプリ</header>
-        <h2>犬の画像を表示するためのアプリです</h2>
-        <button onClick={onButtonclick}>
-        on click
-        </button>
-        <img src={dogUrl}></img>
+      <React.Fragment>
+        <body>  
+          <header>Dog Button</header>
+          <h2>犬の画像を表示するためのアプリです</h2>
+          <img src={dogUrl}></img>
+          <div class="button_wrapper">
+            <button onClick={onButtonclick}>on click</button>
+          </div>
+        </body>
       </React.Fragment>
     )
 }
