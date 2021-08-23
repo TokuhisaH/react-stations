@@ -13,6 +13,7 @@ export const App = (props) => {
 
   const onButtonclick = () =>{
     fetch("https://dog.ceo/api/breeds/image/random")
+    .then(res => res.json())
     .then(data => setDogUrl(data.message))
   }
     return (
