@@ -1,7 +1,7 @@
 // DO NOT DELETE
 import React,{useState,useEffect} from 'react';
 
-export function DogImage (props){
+export const DogImage =(props)=>{
     return (
     <React.Fragment>
       <img src={props.url}></img>
