@@ -2,8 +2,8 @@
 
 import React,{useState,useEffect} from 'react';
 import './App.css'
-import Descripption from './Description';
-import Header from './Header';
+import {Descripption} from './Description';
+import {Header} from './Header';
 
 /**
  * 
