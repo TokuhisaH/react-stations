@@ -16,15 +16,34 @@ export const App = (props) => {
     .then(res => res.json())
     .then(data => setDogUrl(data.message))
   }
+
+  function Header(props){
+    return <React.Fragment>
+      <header>Dog Button</header>
+    </React.Fragment>
+  }
+
+  function Descripption(props){
+    return <React.Fragment>
+      <h2>犬の画像を表示するためのアプリどす</h2>
+      <DogImage ImageUrl={dogUrl}/>
+      <div class="button_wrapper">
+        <button onClick={onButtonclick}>on click</button>
+      </div>      
+    </React.Fragment>
+  }
+
+  function DogImage(props){
+    return <React.Fragment>
+      <img src={props.ImageUrl}></img>
+    </React.Fragment>
+  }
+
     return (
       <React.Fragment>
         <body>  
-          <header>Dog Button</header>
-          <h2>犬の画像を表示するためのアプリです</h2>
-          <img src={dogUrl}></img>
-          <div class="button_wrapper">
-            <button onClick={onButtonclick}>on click</button>
-          </div>
+          <Header/>
+          <Descripption/>
         </body>
       </React.Fragment>
     )
