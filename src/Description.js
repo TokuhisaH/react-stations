@@ -2,7 +2,7 @@
 import React,{useState,ReactDOM} from 'react';
 import {DogImage} from './DogImage';
 
-export const Descripption =(props)=>{
+export const Description =(props)=>{
 
     const [dogUrl, setDogUrl] = useState("https://images.dog.ceo/breeds/spaniel-brittany/n02101388_6057.jpg");
   
