@@ -14,7 +14,7 @@ export const App = (props) => {
       <React.Fragment>
         <body>  
           <Header />
-          <Descripption />
+          <Description />
         </body>
       </React.Fragment>
     );

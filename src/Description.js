@@ -20,6 +20,6 @@ export const Descripption =(props)=>{
         <button onClick={onButtonclick}>on click</button>
       </div>      
     </React.Fragment>
-    )
+    );
   }
 
