@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    background-color: azure;
+
+}
+
+header{
+    background-color: aqua;
+    font-size:40px;
+}
+
+.button_wrapper{
+    margin: auto;
+}
