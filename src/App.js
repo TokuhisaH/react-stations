@@ -2,7 +2,7 @@
 
 import React,{useState,useEffect} from 'react';
 import './App.css'
-import {Description} from './Description';
+// import {Description} from './Description';
 import {Header} from './Header';
 import { DogListContainer } from './DogListContainer';
 
@@ -15,7 +15,7 @@ export const App = (props) => {
       <React.Fragment>
         <body>  
           <Header />
-          <Description />
+          {/* <Description /> */}
           <DogListContainer />
         </body>
       </React.Fragment>

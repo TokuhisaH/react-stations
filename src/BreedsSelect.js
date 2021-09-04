@@ -5,27 +5,28 @@ import { DogListContainer } from './DogListContainer';
 export const BreedsSelect = (props) =>{
     
     const breeds =props.breeds;
-    console.log(breeds)
-
+    const imageList = props.imageList;
+    console.log("imagelist",imageList)
 
     const breedslist = breeds.map((breeds)=>
-        <option value={breeds}>{breeds}</option>
+        <option key={breeds} value={breeds} text={breeds}>{breeds}</option>
     );
 
-    const handleChange = () =>{
-        const ele = document.getElementById( "pulldownBreed" ) ;
-        setSelectedBreed(ele.value)
-    }
-
-    const[selectedBreed,setSelectedBreed]= useState()
-    console.log("今選ばれてる",selectedBreed)
+    const image = imageList.map((imageList)=>
+        <div>
+        <img src={imageList}></img>
+        </div>
+    );
 
     return　(
         <React.Fragment>
-            <select id="pulldownBreed" onChange={handleChange}>
-                <option value="">-</option>
+            <select value={props.value} onChange={props.handleChange}>
                 {breedslist}
             </select>
+            <div class="button_wrapper">
+            <button onClick={props.onButtonClick}>表示する</button>
+            </div>
+            {image}
         </React.Fragment>
     )
 }
